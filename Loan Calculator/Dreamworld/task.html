@@ -1,0 +1,39 @@
+<div class="step-text">
+<p></p><h5 id="description">Description</h5><p>If you found the previous stage too easy, let's add something more interesting. The user might know the amount of the monthly payments and wonder how many months it will take to repay the loan. Let's add this functionality in addition to the calculation of the monthly payment.</p><p style="text-align: start;">In this stage, we need to ask to input the loan principal amount as before. Then, the user should indicate what needs to be calculated (the monthly payment amount or the number of months) and enter the required parameter. After that, the loan calculator should output the value that the user wants to know.</p><p>Also, let’s assume we don't care about decimal places. If you get a floating-point expression as a result of the calculation, you’ll have to do additional actions. Take a look at Example 4 where you need to calculate the monthly payment. You know that the loan principal is 1000 and want to pay it back in 9 months. The real value of payment can be calculated as:</p><p style="text-align: center;"><span class="math-tex">\(\text{payment} = \dfrac{\text{principal}}{\text{months}}=\dfrac{1000}{9} =111.11...\)</span></p><p>Of course, you can't pay that amount of money since it's a float value. You have to round up this value and make it 112. But why do we round it up instead of rounding it down? Remember that no payment can be more than the fixed monthly payment. If your monthly repayment amount is 111, that would make the last payment 112, which is not acceptable. If you make a monthly payment of 112, the last payment will be 104, which is fine. You can calculate the last payment as follows:</p><p style="text-align: center;"><span class="math-tex">\(\text{payment}_{\text{last}} = \text{principal} -(\text{periods}-1) \cdot \text{payment} = 1000 - 8 \cdot 112=104\)</span></p><p>In this stage, you need to count the number of months or the monthly payment. If the last payment differs from the rest, the program should display the monthly payment and the last payment.</p><h5 id="objectives">Objectives</h5><p>The behavior of your program should look like this:</p><ul><li><p>Prompt a user to enter their loan principal and choose which of the two parameters they want to calculate – the number of monthly payments or the monthly payment amount.</p></li><li><p>To perform further calculations, you'll also have to ask for the required missing value.</p></li><li><p>Finally, output the results for the user.</p></li></ul><h5 id="examples">Examples</h5><p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that this is not part of the input.</p><p><strong>Example 1</strong></p><pre><code class="language-no-highlight">Enter the loan principal:
+&gt; 1000
+What do you want to calculate?
+type "m" - for number of monthly payments,
+type "p" - for the monthly payment:
+&gt; m
+Enter the monthly payment:
+&gt; 150
+
+It will take 7 months to repay the loan</code></pre><p><strong>Example 2</strong></p><pre><code class="language-no-highlight">Enter the loan principal:
+&gt; 1000
+What do you want to calculate? 
+type "m" for number of monthly payments,
+type "p" for the monthly payment:
+&gt; m
+Enter the monthly payment:
+&gt; 1000
+
+It will take 1 month to repay the loan</code></pre><p><strong>Example 3</strong></p><pre><code class="language-no-highlight">Enter the loan principal:
+&gt; 1000
+What do you want to calculate?
+type "m" for number of monthly payments,
+type "p" for the monthly payment:
+&gt; p
+Enter the number of months:
+&gt; 10
+
+Your monthly payment = 100</code></pre><p><strong>Example 4</strong></p><pre><code class="language-no-highlight">Enter the loan principal:
+&gt; 1000
+What do you want to calculate?
+type "m" for number of monthly payments,
+type "p" for the monthly payment:
+&gt; p
+Enter the number of months:
+&gt; 9
+
+Your monthly payment = 112 and the last payment = 104.</code></pre>
+</div>
