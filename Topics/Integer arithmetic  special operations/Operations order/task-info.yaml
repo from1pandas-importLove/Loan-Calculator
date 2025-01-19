@@ -1,0 +1,18 @@
+type: sorting
+options:
+  - Exponentiation
+  - Parentheses
+  - Addition
+  - Multiplication
+files:
+  - name: main.py
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/47578#comment
+status: Unchecked
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3

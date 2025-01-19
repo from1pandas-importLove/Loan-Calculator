@@ -1,0 +1,11 @@
+type: code
+custom_name: "Elementary, my dear Watson!"
+files:
+  - name: main.py
+    visible: true
+    highlight_level: NONE
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/39248#comment
+status: Unchecked
+record: -1
+submission_language: python3

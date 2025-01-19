@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: It lets a user specify  parameters and their values.
+  - text: It lets you write scripts from scratch in the command line instead of an IDE.
+  - text: It lets you install new packages without using <code>pip</code>.
+  - text: It lets you automatically generate messages for users.
+  - text: It lets a user interact with a script through the command line.
+files:
+  - name: main.py
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/14974#comment
+status: Solved
+record: -1
+local_check: false
